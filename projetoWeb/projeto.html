@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Listagem de Compradores</title>
+  <style>
+    .description {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #6a4caf;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .search-area {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .grid {
+      margin-top: 20px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .grid th,
+    .grid td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #451c6b;
+    }
+
+    .pagination {
+      margin-top: 20px;
+    }
+
+    .pagination a {
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color .3s;
+      border: 1px solid #ddd;
+    }
+
+    .pagination a.active {
+      background-color: #6a4caf;
+      color: white;
+      border: 1px solid #6a4caf;
+    }
+
+    .pagination a:hover:not(.active) {
+      background-color: #ddd;
+    }
+  </style>
+  <script>
+    function toggleSearch() {
+      var searchArea = document.getElementById('search-area');
+      if (searchArea.style.display === 'none') {
+        searchArea.style.display = 'block';
+      } else {
+        searchArea.style.display = 'none';
+      }
+    }
+
+    function applyFilters() {
+      // Lógica para aplicar os filtros
+    }
+
+    function clearFilters() {
+      // Lógica para limpar os filtros
+    }
+
+    function editBuyer(buyerId) {
+      // Lógica para redirecionar para a tela de edição do comprador com o ID específico
+    }
+  </script>
+</head>
+
+<body>
+  <h1 style="font-size: 23px; text-align: center;"> Consulte os seus Clientes cadastrados na sua Loja ou realize o cadastro de novos Clientes.</h1>
+  <br>
+  <br>
+  <h2>Listagem de Compradores<h2>
+  <button class="btn" onclick="toggleSearch()">Adicionar Cliente</button>
+  <div id="search-area" class="search-area">
+    <input type="text" placeholder="Nome ou Razão Social do Cliente">
+    <input type="text" placeholder="E-mail do Cliente">
+    <input type="text" placeholder="Telefone do Cliente">
+    <input type="date" placeholder="Selecione uma data ou período">
+    <select>
+      <option value="">Cliente bloqueado</option>
+      <option value="sim">SIM</option>
+      <option value="nao">NÃO</option>
+    </select>
+    <button class="btn" onclick="applyFilters()">Aplicar filtros</button>
+    <button class="btn" onclick="clearFilters()">Limpar filtros</button>
+  </div>
+  <table class="grid">
+    <thead>
+      <tr>
+        <th><input type="checkbox"></th>
+        <th>Nome/RazãoSocial</th>
+        <th>E-mail</th>
+        <th>Telefone</th>
+        <th>Data de Cadastro</th>
+        <th>Bloqueado</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Aqui você pode iterar sobre os compradores e preencher as linhas da tabela -->
+      <!-- Por exemplo: -->
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>Nome do Comprador</td>
+        <td>email@teste.com</td>
+        <td>(00)91234-5678</td>
+        <td>01/01/2023</td>
+        <td><input type="checkbox"></td>
+        <td><button onclick="editBuyer(1)">Editar</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="pagination">
+    <a href="#" class="active">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+
+    <br>
+    <br>
+    <br>
+    <title>Cadastro de Clientes</title>
+    <style>
+      /* Estilos CSS aqui */
+    </style>
+    <script>
+      function goBack() {
+        // Lógica para voltar para a tela de clientes
+      }
+
+      function checkPasswordMatch() {
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirmPassword').value;
+
+        if (password !== confirmPassword) {
+          alert('As senhas não conferem.');
+        }
+      }
+
+      function addClient() {
+        // Lógica para adicionar o cliente
+      }
+    </script>
+    </head>
+
+    <body>
+      <h1>Cadastro de Clientes: Informações Principais</h1>
+      <form>
+        <br>
+        <label for="name">Nome do Cliente/Razão Social:</label>
+        <input type="text" id="name" required placeholder="Nome completo ou Razão Social do Cliente">
+        <br>
+        <br>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" required placeholder="E-mail do Cliente">
+        <br>
+        <br>
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" required placeholder="Telefone do Cliente">
+        <br>
+        <br>
+        <label for="registrationDate">Data de Cadastro:</label>
+        <input type="date" id="registrationDate" value="" disabled>
+        <br>
+        <br>
+        <h2>Informações Pessoais</h2>
+        <br>
+        <label for="personType">Tipo de Pessoa:</label>
+        <select id="personType" required>
+          <option value="">Selecione o tipo de Pessoa</option>
+          <option value="fisica">Física</option>
+          <option value="juridica">Jurídica</option>
+        </select>
+        <br>
+        <br>
+
+        <label for="cpfCnpj">CPF/CNPJ:</label>
+        <input type="text" id="cpfCnpj" required placeholder="Insira o CPF ou o CNPJ do Cliente">
+
+        <label for="stateRegistration">Inscrição Estadual:</label>
+        <input type="text" id="stateRegistration" placeholder="Inscrição Estadual do Cliente" disabled>
+        <label for="isento">Isento:</label>
+        <input type="checkbox" id="isento" onclick="stateRegistration.disabled = this.checked">
+        <br>
+        <br>
+        <div id="fieldsPessoaFisica">
+          <h2>Informações Pessoais - Pessoa Física</h2>
+          <label for="gender">Gênero:</label>
+          <select id="gender" required>
+            <option value="">Selecione o gênero do Cliente</option>
+            <option value="feminino">Feminino</option>
+            <option value="masculino">Masculino</option>
+            <option value="outro">Outro</option>
+          </select>
+
+          <label for="birthDate">Data de Nascimento:</label>
+          <input type="date" id="birthDate" required>
+        </div>
+        <br>
+        <br>
+        <h2>Situação do Cliente</h2>
+        <label for="blocked">Bloqueado:</label>
+        <input type="checkbox" id="blocked">
+        <br>
+        <br>
+        <h2>Senha de Acesso</h2>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" required minlength="8" maxlength="15">
+
+        <label for="confirmPassword">Confirmação de Senha:</label>
+        <input type="password" id="confirmPassword" required minlength="8" maxlength="15" onblur="checkPasswordMatch()">
+
+        <button type="button" onclick="addClient()">Adicionar Cliente</button>
+        <button type="button" onclick="goBack()">Voltar</button>
+      </form>
+  </div>
+</body>
+
+</html>
