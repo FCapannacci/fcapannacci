@@ -1,5 +1,5 @@
 # 💫 About Me:
-### Olá! Meu nome é Fernanda 👋<br><br>- 🔭 Hoje trabalho como dev backend<br>- 🫧 Busco aprender e estudar sobre: banco de dados, API's e AI<br>- 😎 A linguagem de programação que mais uso: JavaScript<br>- 💻 O banco de dados que conheço: MySQL e mongoDB<br>- 🏳️‍🌈 Pronomes: ela/dela <br><br><br>
+### Olá! Meu nome é Fernanda 👋<br><br>- 🔭 Hoje trabalho como Engenheira de Dados<br>- 🫧 Busco aprender e estudar sobre: banco de dados, python e IA<br>- 😎 As tecnologias que mais utilizo são: PrestoSQL/SQL<br>- 💻 O banco de dados que conheço: MySQL e mongoDB<br>- 🏳️‍🌈 Pronomes: ela/dela <br><br><br>
 
 
 ## 🌐 Socials:
